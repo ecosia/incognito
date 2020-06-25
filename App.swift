@@ -10,5 +10,3 @@ final class App: NSObject, UIApplicationDelegate {
         }
     }
 }
-
-

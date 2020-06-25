@@ -5,10 +5,10 @@ struct TabView: View {
     
     var body: some View {
         ZStack {
-            Bar()
             Text(.init("New.tab"))
                 .font(.headline)
                 .foregroundColor(.secondary)
+            Bar().frame(height: session.barHeight)
         }
     }
 }
