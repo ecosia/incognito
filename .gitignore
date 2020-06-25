@@ -15,6 +15,7 @@
 .swp
 *.xcuserstate
 xcdebugger
+xcuserdata/
 ~.nib/
 *~
 timeline.xctimeline
