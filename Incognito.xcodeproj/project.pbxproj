@@ -7,23 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE32751C24A4B2BB006C6F8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32751B24A4B2BB006C6F8D /* AppDelegate.swift */; };
-		CE32751E24A4B2BB006C6F8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32751D24A4B2BB006C6F8D /* SceneDelegate.swift */; };
-		CE32752024A4B2BB006C6F8D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32751F24A4B2BB006C6F8D /* ContentView.swift */; };
+		CE32751E24A4B2BB006C6F8D /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32751D24A4B2BB006C6F8D /* Scene.swift */; };
+		CE32752024A4B2BB006C6F8D /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32751F24A4B2BB006C6F8D /* TabView.swift */; };
 		CE32752224A4B2BC006C6F8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE32752124A4B2BC006C6F8D /* Assets.xcassets */; };
-		CE32752524A4B2BC006C6F8D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE32752424A4B2BC006C6F8D /* Preview Assets.xcassets */; };
 		CE32752824A4B2BC006C6F8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE32752624A4B2BC006C6F8D /* LaunchScreen.storyboard */; };
+		CE32753024A4B686006C6F8D /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32752F24A4B686006C6F8D /* Window.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE32751824A4B2BB006C6F8D /* Incognito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Incognito.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE32751B24A4B2BB006C6F8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE32751D24A4B2BB006C6F8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE32751F24A4B2BB006C6F8D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE32751D24A4B2BB006C6F8D /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		CE32751F24A4B2BB006C6F8D /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		CE32752124A4B2BC006C6F8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE32752424A4B2BC006C6F8D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE32752724A4B2BC006C6F8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE32752924A4B2BC006C6F8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE32752F24A4B686006C6F8D /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
+		CE32753124A4B924006C6F8D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		CE32753224A4B924006C6F8D /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		CE32753324A4B924006C6F8D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +41,15 @@
 		CE32750F24A4B2BB006C6F8D = {
 			isa = PBXGroup;
 			children = (
-				CE32751A24A4B2BB006C6F8D /* Incognito */,
+				CE32753124A4B924006C6F8D /* .gitignore */,
+				CE32753224A4B924006C6F8D /* LICENSE */,
+				CE32753324A4B924006C6F8D /* README.md */,
+				CE32752924A4B2BC006C6F8D /* Info.plist */,
+				CE32751D24A4B2BB006C6F8D /* Scene.swift */,
+				CE32751F24A4B2BB006C6F8D /* TabView.swift */,
+				CE32752F24A4B686006C6F8D /* Window.swift */,
+				CE32752124A4B2BC006C6F8D /* Assets.xcassets */,
+				CE32752624A4B2BC006C6F8D /* LaunchScreen.storyboard */,
 				CE32751924A4B2BB006C6F8D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,28 +60,6 @@
 				CE32751824A4B2BB006C6F8D /* Incognito.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		CE32751A24A4B2BB006C6F8D /* Incognito */ = {
-			isa = PBXGroup;
-			children = (
-				CE32751B24A4B2BB006C6F8D /* AppDelegate.swift */,
-				CE32751D24A4B2BB006C6F8D /* SceneDelegate.swift */,
-				CE32751F24A4B2BB006C6F8D /* ContentView.swift */,
-				CE32752124A4B2BC006C6F8D /* Assets.xcassets */,
-				CE32752624A4B2BC006C6F8D /* LaunchScreen.storyboard */,
-				CE32752924A4B2BC006C6F8D /* Info.plist */,
-				CE32752324A4B2BC006C6F8D /* Preview Content */,
-			);
-			path = Incognito;
-			sourceTree = "<group>";
-		};
-		CE32752324A4B2BC006C6F8D /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				CE32752424A4B2BC006C6F8D /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +121,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE32752824A4B2BC006C6F8D /* LaunchScreen.storyboard in Resources */,
-				CE32752524A4B2BC006C6F8D /* Preview Assets.xcassets in Resources */,
 				CE32752224A4B2BC006C6F8D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,9 +132,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE32751C24A4B2BB006C6F8D /* AppDelegate.swift in Sources */,
-				CE32751E24A4B2BB006C6F8D /* SceneDelegate.swift in Sources */,
-				CE32752024A4B2BB006C6F8D /* ContentView.swift in Sources */,
+				CE32751E24A4B2BB006C6F8D /* Scene.swift in Sources */,
+				CE32752024A4B2BB006C6F8D /* TabView.swift in Sources */,
+				CE32753024A4B686006C6F8D /* Window.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,13 +202,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = Incognito;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -264,18 +252,20 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = Incognito;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -285,17 +275,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Incognito/Preview Content\"";
 				DEVELOPMENT_TEAM = 33YMRSYD2L;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Incognito/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.ecosia.Incognito;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -305,17 +291,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Incognito/Preview Content\"";
 				DEVELOPMENT_TEAM = 33YMRSYD2L;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Incognito/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.ecosia.Incognito;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
