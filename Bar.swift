@@ -1,16 +1,32 @@
 import SwiftUI
 
 struct Bar: View {
-    @State private var text = ""
+//    @State private var text = ""
+    @State private var hide = true
     
     var body: some View {
         VStack {
             Spacer()
             HStack {
-                Blob.Icon(icon: "magnifyingglass", action: commit)
-                    .padding()
-                Spacer()
+                if hide {
+                    Blob.Icon(icon: "magnifyingglass", action: show)
+                        .padding()
+                    Spacer()
+                } else {
+                    Blob.Icon(icon: "multiply", action: show)
+                        .padding()
+                    Blob.Icon(icon: "square.on.square", action: show)
+                        .padding()
+                    Blob.Icon(icon: "line.horizontal.3", action: show)
+                        .padding()
+                }
             }
+        }
+    }
+    
+    private func show() {
+        withAnimation {
+            hide.toggle()
         }
     }
     
