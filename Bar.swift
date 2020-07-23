@@ -4,7 +4,14 @@ struct Bar: View {
     @State private var text = ""
     
     var body: some View {
-        Blob.Icon(icon: "plus", action: commit)
+        VStack {
+            Spacer()
+            HStack {
+                Blob.Icon(icon: "magnifyingglass", action: commit)
+                    .padding()
+                Spacer()
+            }
+        }
     }
     
 //    var body: some View {
