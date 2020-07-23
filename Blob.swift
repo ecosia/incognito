@@ -25,21 +25,31 @@ struct Blob {
     }
 }
 
-struct _Blob<Content>: View where Content : View {
+private struct _Blob<Content>: View where Content : View {
     let content: Content
     let action: () -> Void
     
     var body: some View {
         Button(action: action) {
+            EmptyView()
+        }.buttonStyle(Style { pressed in
             ZStack {
                 Circle()
                     .frame(width: 45, height: 45)
-                    .shadow(color: .init(.systemBackground), radius: 2, x: -2, y: -2)
-                    .shadow(color: .init(.systemBackground), radius: 3, x: 3, y: 3)
-                    .foregroundColor(.init(.secondarySystemBackground))
-                content
-                    .foregroundColor(.pink)
+                    .shadow(color: .init(.systemBackground), radius: 2, x: pressed ? 0 : -2, y: pressed ? 0 : -2)
+                    .shadow(color: .init(.systemBackground), radius: 3, x: pressed ? 0 : 3, y: pressed ? 0 : 3)
+                    .foregroundColor(pressed ? .pink : .init(.secondarySystemBackground))
+                self.content
+                    .foregroundColor(pressed ? .init(.systemBackground) : .pink)
             }
-        }
+        })
+    }
+}
+
+private struct Style<Content>: ButtonStyle where Content : View {
+    var hover: (Bool) -> Content
+    
+    func makeBody(configuration: Configuration) -> some View {
+        hover(configuration.isPressed)
     }
 }
