@@ -1,10 +1,14 @@
 import SwiftUI
+import Combine
 
 struct Tools: View {
+    var search: (String) -> Void
     @State private var text = ""
     @State private var hide = true
     @State private var tabsY = CGFloat()
     @State private var menuY = CGFloat()
+    @State private var bottom = CGFloat()
+    @State private var subs = Set<AnyCancellable>()
     
     var body: some View {
         VStack {
@@ -32,7 +36,18 @@ struct Tools: View {
                     }
                     Spacer()
                 }
-            }
+            }.offset(y: bottom)
+        }.onAppear {
+            NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification).sink { notification in
+                withAnimation {
+                    self.bottom = -(notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.height
+                }
+            }.store(in: &self.subs)
+            NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification).sink { notification in
+                withAnimation {
+                    self.bottom = 0
+                }
+            }.store(in: &self.subs)
         }
     }
     
@@ -63,6 +78,7 @@ struct Tools: View {
     }
     
     private func commit() {
-        
+        show()
+        search(text)
     }
 }

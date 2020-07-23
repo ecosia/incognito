@@ -7,7 +7,9 @@ struct Bar: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
-                .frame(width: 260, height: 40)
+                .frame(width: 220, height: 40)
+                .shadow(color: .init(.systemBackground), radius: 2, x: -2, y: -2)
+                .shadow(color: .init(.systemBackground), radius: 3, x: 3, y: 3)
                 .foregroundColor(.init(.secondarySystemBackground))
             HStack {
                 Spacer()
@@ -18,7 +20,7 @@ struct Bar: View {
                     .multilineTextAlignment(.center)
                     .disableAutocorrection(true)
                     .textFieldStyle(PlainTextFieldStyle())
-                    .frame(width: 220, height: 40)
+                    .frame(width: 200, height: 40)
                 Spacer()
             }
         }
