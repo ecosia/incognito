@@ -16,6 +16,7 @@
 		CE3E167C24C9C00C002FD75D /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E167B24C9C00C002FD75D /* Bar.swift */; };
 		CE4E027924A4D4D700E24ADA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE4E027724A4D4D700E24ADA /* Localizable.strings */; };
 		CE4E027B24A4DD7F00E24ADA /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4E027A24A4DD7F00E24ADA /* Tools.swift */; };
+		CE97946624F7C397002CF46E /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97946524F7C397002CF46E /* Progress.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		CE3E167B24C9C00C002FD75D /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		CE4E027824A4D4D700E24ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE4E027A24A4DD7F00E24ADA /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		CE97946524F7C397002CF46E /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				CE32752F24A4B686006C6F8D /* App.swift */,
 				CE3E167B24C9C00C002FD75D /* Bar.swift */,
 				CE311FBD24C99C5D00B4A468 /* Blob.swift */,
+				CE97946524F7C397002CF46E /* Progress.swift */,
 				CE32751D24A4B2BB006C6F8D /* Scene.swift */,
 				CE32751F24A4B2BB006C6F8D /* Tab.swift */,
 				CE4E027A24A4DD7F00E24ADA /* Tools.swift */,
@@ -149,6 +152,7 @@
 				CE3E167C24C9C00C002FD75D /* Bar.swift in Sources */,
 				CE4E027B24A4DD7F00E24ADA /* Tools.swift in Sources */,
 				CE311FBE24C99C5D00B4A468 /* Blob.swift in Sources */,
+				CE97946624F7C397002CF46E /* Progress.swift in Sources */,
 				CE32752024A4B2BB006C6F8D /* Tab.swift in Sources */,
 				CE32753024A4B686006C6F8D /* App.swift in Sources */,
 			);

@@ -52,6 +52,7 @@ struct Tools: View {
     }
     
     private func show() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         if hide {
             withAnimation(Animation.linear(duration: 0.2)) {
                 hide = false
