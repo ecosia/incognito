@@ -5,10 +5,20 @@ extension Web {
     final class Coordinator: WKWebView, WKNavigationDelegate {
         var last = "" {
             didSet {
-                let url = last.contains("http") ? last : "http://" + last
-                _ = URL(string: url).map { load(.init(url: $0)) }
+                guard !last.contains("http") else {
+                    navigate(last)
+                    return
+                }
+                
+                guard !last.contains(".") && last.last != "." else {
+                    navigate("http://" + last)
+                    return
+                }
+                
+                navigate("https://www.ecosia.org/search?q=" + (last.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""))
             }
         }
+        
         private var observations = Set<NSKeyValueObservation>()
         private let view: Web
         
@@ -41,6 +51,9 @@ extension Web {
         func webView(_: WKWebView, didFinish: WKNavigation!) {
             view.progress = 1
         }
+        
+        private func navigate(_ url: String) {
+            _ = URL(string: url).map { load(.init(url: $0)) }
+        }
     }
-
 }
