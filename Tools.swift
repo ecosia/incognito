@@ -2,14 +2,16 @@ import SwiftUI
 import Combine
 
 struct Tools: View {
-    var search: (String) -> Void
-    @State private var text = ""
+    @Binding var text: String
+    @Binding var url: URL?
+    @State private var editing = ""
     @State private var hide = true
     @State private var tabsY = CGFloat()
     @State private var menuY = CGFloat()
     @State private var bottom = CGFloat()
     @State private var barWidth = CGFloat()
     @State private var subs = Set<AnyCancellable>()
+    @State private var options = false
     
     var body: some View {
         VStack {
@@ -17,19 +19,22 @@ struct Tools: View {
             ZStack {
                 HStack {
                     Spacer()
-                    Bar(text: $text, width: barWidth, action: commit)
+                    Bar(text: $editing, width: barWidth, action: commit)
                     Spacer()
                 }
                 HStack {
                     Spacer()
                     ZStack {
-                        if !hide {
-                            Blob.Icon(icon: "square.on.square", action: show)
-                                .padding()
-                                .offset(y: tabsY)
-                            Blob.Icon(icon: "line.horizontal.3", action: show)
-                                .padding()
-                                .offset(y: menuY)
+                        Blob.Icon(icon: "square.on.square", action: show)
+                            .padding()
+                            .offset(y: tabsY)
+                        Blob.Icon(icon: "line.horizontal.3") {
+                            self.show()
+                            self.options = true
+                        }.padding()
+                            .offset(y: menuY)
+                            .sheet(isPresented: $options) {
+                                Options(url: self.$url, visible: self.$options)
                         }
                         Blob.Icon(icon: hide ? "magnifyingglass" : "multiply", action: show)
                             .padding()
@@ -80,6 +85,6 @@ struct Tools: View {
     
     private func commit() {
         show()
-        search(text)
+        text = editing
     }
 }

@@ -10,7 +10,7 @@ extension Web {
                     return
                 }
                 
-                guard !last.contains(".") && last.last != "." else {
+                guard !last.contains(".") || last.last == "." else {
                     navigate("http://" + last)
                     return
                 }
@@ -35,10 +35,19 @@ extension Web {
             
             super.init(frame: .zero, configuration: configuration)
             navigationDelegate = self
+            
             observations.insert(observe(\.estimatedProgress, options: .new) { [weak self] in
                 $1.newValue.map { progress in
                     DispatchQueue.main.async {
                         self?.view.progress = .init(progress)
+                    }
+                }
+            })
+            
+            observations.insert(observe(\.url, options: .new) { [weak self] in
+                $1.newValue?.map { url in
+                    DispatchQueue.main.async {
+                        self?.view.url = url
                     }
                 }
             })

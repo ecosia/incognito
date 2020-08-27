@@ -22,6 +22,9 @@ struct Bar: View {
                     .disableAutocorrection(true)
                     .textFieldStyle(PlainTextFieldStyle())
                     .frame(width: width, height: 40)
+                    .onTapGesture {
+                        self.text = ""
+                }
                 Spacer()
             }
         }

@@ -2,7 +2,8 @@ import SwiftUI
 import WebKit
 
 struct Web: UIViewRepresentable {
-    @Binding var url: String
+    @Binding var text: String
+    @Binding var url: URL?
     @Binding var progress: CGFloat
     
     func makeCoordinator() -> Coordinator {
@@ -14,8 +15,8 @@ struct Web: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: WKWebView, context: Context) {
-        if context.coordinator.last != url {
-            context.coordinator.last = url
+        if context.coordinator.last != text {
+            context.coordinator.last = text
         }
     }
 }

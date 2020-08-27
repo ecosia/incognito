@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CE0C785924F7E5D5001C9751 /* Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C785824F7E5D5001C9751 /* Web.swift */; };
 		CE0C785B24F7E5F9001C9751 /* Web.Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C785A24F7E5F9001C9751 /* Web.Coordinator.swift */; };
+		CE0C785D24F7F8DE001C9751 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C785C24F7F8DE001C9751 /* Options.swift */; };
+		CE0C785F24F7FCD0001C9751 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C785E24F7FCD0001C9751 /* Session.swift */; };
 		CE311FBE24C99C5D00B4A468 /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE311FBD24C99C5D00B4A468 /* Blob.swift */; };
 		CE32751E24A4B2BB006C6F8D /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32751D24A4B2BB006C6F8D /* Scene.swift */; };
 		CE32752024A4B2BB006C6F8D /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32751F24A4B2BB006C6F8D /* Tab.swift */; };
@@ -24,6 +26,8 @@
 /* Begin PBXFileReference section */
 		CE0C785824F7E5D5001C9751 /* Web.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web.swift; sourceTree = "<group>"; };
 		CE0C785A24F7E5F9001C9751 /* Web.Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web.Coordinator.swift; sourceTree = "<group>"; };
+		CE0C785C24F7F8DE001C9751 /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		CE0C785E24F7FCD0001C9751 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		CE311FBD24C99C5D00B4A468 /* Blob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blob.swift; sourceTree = "<group>"; };
 		CE32751824A4B2BB006C6F8D /* Incognito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Incognito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE32751D24A4B2BB006C6F8D /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
@@ -62,8 +66,10 @@
 				CE32752F24A4B686006C6F8D /* App.swift */,
 				CE3E167B24C9C00C002FD75D /* Bar.swift */,
 				CE311FBD24C99C5D00B4A468 /* Blob.swift */,
+				CE0C785C24F7F8DE001C9751 /* Options.swift */,
 				CE97946524F7C397002CF46E /* Progress.swift */,
 				CE32751D24A4B2BB006C6F8D /* Scene.swift */,
+				CE0C785E24F7FCD0001C9751 /* Session.swift */,
 				CE32751F24A4B2BB006C6F8D /* Tab.swift */,
 				CE4E027A24A4DD7F00E24ADA /* Tools.swift */,
 				CE0C785A24F7E5F9001C9751 /* Web.Coordinator.swift */,
@@ -161,7 +167,9 @@
 				CE311FBE24C99C5D00B4A468 /* Blob.swift in Sources */,
 				CE97946624F7C397002CF46E /* Progress.swift in Sources */,
 				CE0C785B24F7E5F9001C9751 /* Web.Coordinator.swift in Sources */,
+				CE0C785F24F7FCD0001C9751 /* Session.swift in Sources */,
 				CE32752024A4B2BB006C6F8D /* Tab.swift in Sources */,
+				CE0C785D24F7F8DE001C9751 /* Options.swift in Sources */,
 				CE32753024A4B686006C6F8D /* App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
