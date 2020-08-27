@@ -8,20 +8,20 @@ struct Tools: View {
     @State private var tabsY = CGFloat()
     @State private var menuY = CGFloat()
     @State private var bottom = CGFloat()
+    @State private var barWidth = CGFloat()
     @State private var subs = Set<AnyCancellable>()
     
     var body: some View {
         VStack {
             Spacer()
             ZStack {
-                if !hide {
-                    HStack {
-                        Spacer()
-                        Bar(text: $text, action: commit)
-                        Spacer()
-                    }
+                HStack {
+                    Spacer()
+                    Bar(text: $text, width: barWidth, action: commit)
+                    Spacer()
                 }
                 HStack {
+                    Spacer()
                     ZStack {
                         if !hide {
                             Blob.Icon(icon: "square.on.square", action: show)
@@ -34,7 +34,9 @@ struct Tools: View {
                         Blob.Icon(icon: hide ? "magnifyingglass" : "multiply", action: show)
                             .padding()
                     }
-                    Spacer()
+                    if hide {
+                        Spacer()
+                    }
                 }
             }.offset(y: bottom)
         }.onAppear {
@@ -56,6 +58,7 @@ struct Tools: View {
         if hide {
             withAnimation(Animation.linear(duration: 0.2)) {
                 hide = false
+                barWidth = 200
             }
             
             withAnimation(Animation.easeOut(duration: 0.2).delay(0.1)) {
@@ -72,10 +75,10 @@ struct Tools: View {
             }
             
             withAnimation(Animation.linear(duration: 0.2).delay(0.1)) {
+                barWidth = 0
                 hide = true
             }
         }
-        
     }
     
     private func commit() {
