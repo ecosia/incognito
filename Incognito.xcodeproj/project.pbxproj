@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0C785924F7E5D5001C9751 /* Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C785824F7E5D5001C9751 /* Web.swift */; };
+		CE0C785B24F7E5F9001C9751 /* Web.Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C785A24F7E5F9001C9751 /* Web.Coordinator.swift */; };
 		CE311FBE24C99C5D00B4A468 /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE311FBD24C99C5D00B4A468 /* Blob.swift */; };
 		CE32751E24A4B2BB006C6F8D /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32751D24A4B2BB006C6F8D /* Scene.swift */; };
 		CE32752024A4B2BB006C6F8D /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32751F24A4B2BB006C6F8D /* Tab.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE0C785824F7E5D5001C9751 /* Web.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web.swift; sourceTree = "<group>"; };
+		CE0C785A24F7E5F9001C9751 /* Web.Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web.Coordinator.swift; sourceTree = "<group>"; };
 		CE311FBD24C99C5D00B4A468 /* Blob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blob.swift; sourceTree = "<group>"; };
 		CE32751824A4B2BB006C6F8D /* Incognito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Incognito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE32751D24A4B2BB006C6F8D /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 				CE32751D24A4B2BB006C6F8D /* Scene.swift */,
 				CE32751F24A4B2BB006C6F8D /* Tab.swift */,
 				CE4E027A24A4DD7F00E24ADA /* Tools.swift */,
+				CE0C785A24F7E5F9001C9751 /* Web.Coordinator.swift */,
+				CE0C785824F7E5D5001C9751 /* Web.swift */,
 				CE32752124A4B2BC006C6F8D /* Assets.xcassets */,
 				CE32752624A4B2BC006C6F8D /* LaunchScreen.storyboard */,
 				CE4E027724A4D4D700E24ADA /* Localizable.strings */,
@@ -150,9 +156,11 @@
 			files = (
 				CE32751E24A4B2BB006C6F8D /* Scene.swift in Sources */,
 				CE3E167C24C9C00C002FD75D /* Bar.swift in Sources */,
+				CE0C785924F7E5D5001C9751 /* Web.swift in Sources */,
 				CE4E027B24A4DD7F00E24ADA /* Tools.swift in Sources */,
 				CE311FBE24C99C5D00B4A468 /* Blob.swift in Sources */,
 				CE97946624F7C397002CF46E /* Progress.swift in Sources */,
+				CE0C785B24F7E5F9001C9751 /* Web.Coordinator.swift in Sources */,
 				CE32752024A4B2BB006C6F8D /* Tab.swift in Sources */,
 				CE32753024A4B686006C6F8D /* App.swift in Sources */,
 			);

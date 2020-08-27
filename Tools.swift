@@ -54,26 +54,23 @@ struct Tools: View {
     }
     
     private func show() {
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         if hide {
             withAnimation(Animation.linear(duration: 0.2)) {
                 hide = false
                 barWidth = 200
             }
-            
             withAnimation(Animation.easeOut(duration: 0.2).delay(0.1)) {
                 menuY = -75
             }
-            
             withAnimation(Animation.easeOut(duration: 0.3).delay(0.1)) {
                 tabsY = -150
             }
         } else {
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
             withAnimation(Animation.easeOut(duration: 0.2)) {
                 tabsY = 0
                 menuY = 0
             }
-            
             withAnimation(Animation.linear(duration: 0.2).delay(0.1)) {
                 barWidth = 0
                 hide = true
