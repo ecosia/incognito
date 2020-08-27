@@ -57,20 +57,20 @@ struct Tools: View {
                 hide = false
             }
             
-            withAnimation(Animation.easeOut(duration: 0.3).delay(0.1)) {
+            withAnimation(Animation.easeOut(duration: 0.2).delay(0.1)) {
                 menuY = -75
             }
             
-            withAnimation(Animation.easeOut(duration: 0.5).delay(0.1)) {
+            withAnimation(Animation.easeOut(duration: 0.3).delay(0.1)) {
                 tabsY = -150
             }
         } else {
-            withAnimation(Animation.easeOut(duration: 0.3)) {
+            withAnimation(Animation.easeOut(duration: 0.2)) {
                 tabsY = 0
                 menuY = 0
             }
             
-            withAnimation(Animation.linear(duration: 0.3).delay(0.1)) {
+            withAnimation(Animation.linear(duration: 0.2).delay(0.1)) {
                 hide = true
             }
         }
